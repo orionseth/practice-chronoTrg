@@ -1,3 +1,19 @@
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+-COLORS
+Text
+accent: #f8f9fa
+default: #e9ecef
+dim: #dee2e6
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +26,9 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: #e9ecef;
   line-height: 1;
   padding: 2.4rem;
 }
@@ -28,50 +46,79 @@ body {
 /******************************/
 
 .party-member {
-  background-color: blue;
-  color: #fff;
+  background: linear-gradient(to left top, #343a40, #495057);
   padding: 0.8rem;
 
   display: grid;
   grid-template-columns: 3fr 3fr 4fr;
-  grid-template-rows: 8fr 2fr;
+  grid-template-rows: 85fr 15fr;
   column-gap: 4.8rem;
   row-gap: 2.4rem;
 
   /* temporary */
-  height: 30rem;
+  /* height: 30rem; */
 }
 
+/* CHARACTER */
 .character-box {
   grid-column: 1;
 }
 
-.equip-col {
+.character-img {
+  display: block;
+  width: 100%;
+}
+
+.character-desc {
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 0.4rem 0.8rem;
+}
+
+.character-name,
+.level-num {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #f8f9fa;
+  margin-bottom: 0.4rem;
+}
+
+.character-level {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #dee2e6;
+}
+
+.level-num {
+  margin: 0 0 0 0.8rem;
+}
+
+/* STATUS & EQUIPMENT */
+.stats-equip-col {
   grid-column: 2;
   grid-row: 1 / -1;
 }
 
-.stats-box {
+/* ATTRIBUTES */
+.attributes-box {
   grid-column: 3;
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  justify-items: start;
+  align-items: start;
 }
 
-.elem-box {
+/* ELEMENT */
+.element {
   grid-column: 1;
 }
 
+/* EXPERIENCE */
 .exp-box {
   grid-column: 3;
   grid-row: 2;
 }
-
-/* 
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-
--COLORS
-
-*/
