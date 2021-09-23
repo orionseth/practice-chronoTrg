@@ -102,6 +102,10 @@ body {
   background: linear-gradient(to top left, #ced4da, #e9ecef);
 }
 
+.element--water {
+  background: linear-gradient(to top left, #4dabf7, #a5d8ff);
+}
+
 /* Points */
 .points {
   font-size: 2rem;
