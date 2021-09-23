@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   color: #e9ecef;
   line-height: 1;
-  padding: 2.4rem;
+  padding: 1.2rem;
 }
 
 /******************************/
@@ -22,7 +22,7 @@ body {
 /******************************/
 
 .party {
-  max-width: 65rem;
+  max-width: 66rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ body {
   padding: 0.8rem;
 
   display: grid;
-  grid-template-columns: 3fr 3fr 4fr;
+  grid-template-columns: 6fr 7fr 7fr;
   column-gap: 4.8rem;
 }
 
@@ -209,4 +209,85 @@ body {
 .attribute-number {
   font-size: 1.8rem;
   font-weight: 500;
+}
+
+/**************************/
+/* BELOW  704px */
+/**************************/
+
+@media (max-width: 44em) {
+  .party {
+    max-width: 51rem;
+  }
+
+  .party-member {
+    grid-template-columns: 45fr 55fr;
+    column-gap: 3.2rem;
+    row-gap: 1.6rem;
+  }
+
+  .points-col {
+    padding-right: 0.8rem;
+  }
+
+  .equip-attr-col {
+    margin: 0.8rem;
+    grid-column: 1 / -1;
+    flex-direction: row-reverse;
+  }
+
+  .attributes-grid {
+    column-gap: 1.6rem;
+  }
+
+  .attribute {
+    gap: 0.8rem;
+  }
+}
+
+/**************************/
+/* BELOW  464px */
+/**************************/
+
+@media (max-width: 29em) {
+  html {
+    /* 9px / 16px * 100 = 56.25 */
+    font-size: 56.25%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .party {
+    gap: 0;
+  }
+
+  .party-member {
+    grid-template-columns: 1fr;
+    padding: 1.2rem 6rem;
+  }
+
+  .character-col {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .character-name {
+    margin-bottom: 0.4rem;
+  }
+
+  .points-col {
+    padding: 0;
+    gap: 1.6rem;
+  }
+
+  .battle-powers {
+    justify-content: center;
+  }
+
+  .equip-attr-col {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
 }
